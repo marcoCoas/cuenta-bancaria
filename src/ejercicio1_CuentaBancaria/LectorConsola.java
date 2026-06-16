@@ -10,19 +10,16 @@ public class LectorConsola {
         sc = new Scanner(System.in);
     }
     
-    
     public String leerTexto(String mensaje){
         System.out.println(mensaje);
         return sc.nextLine();
-        
     }
     
     public double leerDouble(){
         return 0;
-    
     }
     
-    public double leerDoubleNegativo(){
+    public double leerDoubleNegativo(String mensaje){
         return 0;
     }
     
@@ -30,10 +27,8 @@ public class LectorConsola {
         return 0;
     }
     
-    
     public int leerEntero(){
         return 0;
-    
     }
     
     public void cerrar(){
