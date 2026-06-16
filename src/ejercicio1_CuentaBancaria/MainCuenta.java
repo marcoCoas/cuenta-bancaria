@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class MainCuenta {
 
     public static void main(String[] args) {
+        
+        CajeroApp app = new CajeroApp();
+        app.iniciar();
+        
+        /*
         Scanner sc = new Scanner(System.in);
         
         int opcion;
@@ -142,6 +147,7 @@ public class MainCuenta {
         }
         
         System.out.println(usuario1.obtenerInformacion());
+       */
         
     }
     
