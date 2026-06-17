@@ -1,7 +1,5 @@
 package ejercicio1_CuentaBancaria;
-
 import java.util.Scanner;
-
 public class LectorConsola {
     
     private Scanner sc;
@@ -16,10 +14,12 @@ public class LectorConsola {
     }
     
     public double leerDouble(){
+        System.out.println(100);
         return 0;
     }
     
-    public double leerDoubleNegativo(String mensaje){
+    public double leerDoubleNoNegativo(String mensaje){
+        System.out.println(mensaje);
         return 0;
     }
     
