@@ -19,8 +19,27 @@ public class LectorConsola {
     }
     
     public double leerDoubleNoNegativo(String mensaje){
-        System.out.println(mensaje);
-        return 0;
+        double valor = 0;
+        boolean valido = false;
+        
+        while(!valido){
+            System.out.println(mensaje);
+            
+            if(!sc.hasNextDouble()){
+                System.out.println("Entrada invalida. Ingrese un numero");
+                sc.next();
+            }else{
+                valor = sc.nextDouble();
+                
+                if(valor < 0){
+                    System.out.println("El valor no puede ser negativo");
+                }else{
+                    valido = true;
+                }
+            }
+        }
+        
+        return valor;
     }
     
     public double leerDoubleMayorCero(){
