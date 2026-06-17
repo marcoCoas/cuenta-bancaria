@@ -9,16 +9,17 @@ public class CajeroApp {
     }
     
     public void iniciar(){
-        String titular = lector.leerTexto("Ingrese el nombre del usuario");
-        double saldo = lector.leerDoubleNoNegativo("Ingrese el saldo inicial");
-        
-        cuenta = new CuentaBancaria(titular, saldo);
-        System.out.println(cuenta.obtenerInformacion());
+        crearCuenta();
         
         lector.cerrar();
     }
     
     private void crearCuenta(){
+        String titular = lector.leerTexto("Ingrese el nombre del usuario");
+        double saldo = lector.leerDoubleNoNegativo("Ingrese el saldo inicial");
+        
+        cuenta = new CuentaBancaria(titular, saldo);
+        System.out.println(cuenta.obtenerInformacion());
     }
     
     private void mostrarMenu(){
@@ -26,7 +27,6 @@ public class CajeroApp {
     }
     
     private void procesarOpcion(){
-    
     
     }
     

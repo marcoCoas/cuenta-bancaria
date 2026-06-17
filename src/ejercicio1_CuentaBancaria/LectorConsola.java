@@ -14,7 +14,6 @@ public class LectorConsola {
     }
     
     public double leerDouble(){
-        System.out.println(100);
         return 0;
     }
     
