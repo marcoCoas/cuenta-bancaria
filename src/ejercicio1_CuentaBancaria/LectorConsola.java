@@ -45,8 +45,23 @@ public class LectorConsola {
         return 0;
     }
     
-    public int leerEntero(){
-        return 0;
+    public int leerEntero(String mensaje){
+        int numEntero = 0;
+        boolean validoEntero = false;
+        
+        while(!validoEntero){
+            System.out.println(mensaje);
+            
+            if(!sc.hasNextInt()){
+                System.out.println("Entrada invalida. Ingrese un numero entero");
+                sc.next();
+            }else{
+                numEntero = sc.nextInt();
+                validoEntero = true;
+            }
+        
+        }
+        return numEntero;
     }
     
     public void cerrar(){

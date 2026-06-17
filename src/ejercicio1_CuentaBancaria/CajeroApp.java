@@ -20,9 +20,16 @@ public class CajeroApp {
         
         cuenta = new CuentaBancaria(titular, saldo);
         System.out.println(cuenta.obtenerInformacion());
+        mostrarMenu();
     }
     
     private void mostrarMenu(){
+        System.out.println("===============MENU=========================");
+        System.out.println("1. Ver informacion");
+        System.out.println("2. Depositar");
+        System.out.println("3. Retirar");
+        System.out.println("4. Salir");
+        
     
     }
     
