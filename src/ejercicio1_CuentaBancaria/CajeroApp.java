@@ -44,7 +44,6 @@ public class CajeroApp {
                 System.out.println(cuenta.obtenerInformacion());
                 break;
             case 2:
-                System.out.println("Ingrese el deposito");
                 realizarDeposito();
                 break;
             case 3:
@@ -62,12 +61,20 @@ public class CajeroApp {
     }
     
     private void realizarDeposito(){
-    
+        double monto = lector.leerDoubleMayorCero("Ingrese el monto a DEPOSITAR");
+        boolean depositoCorrecto = cuenta.depositar(monto);
+        
+        if(depositoCorrecto){
+            System.out.println("El DEPOSITO se realizo correctamente");
+        }else{
+            System.out.println("No se pudo realizar el deposito");
+        }
+        
+        cuenta.obtenerInformacion();
     }
     
     private void realizarRetiro(){
     
     }
    
-    
 }

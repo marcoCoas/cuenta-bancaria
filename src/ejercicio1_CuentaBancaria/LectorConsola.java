@@ -11,7 +11,7 @@ public class LectorConsola {
     public String leerTexto(String mensaje){
         System.out.println(mensaje);
         return sc.nextLine();
-            }
+    }
     
     public double leerDoubleNoNegativo(String mensaje){
         double valor = 0;
