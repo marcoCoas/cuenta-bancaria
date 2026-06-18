@@ -26,8 +26,6 @@ public class CajeroApp {
         double saldo = lector.leerDoubleNoNegativo("Ingrese el saldo inicial");
         
         cuenta = new CuentaBancaria(titular, saldo);
-        //System.out.println(cuenta.obtenerInformacion());
-        //mostrarMenu();
     }
     
     private void mostrarMenu(){
@@ -47,7 +45,6 @@ public class CajeroApp {
                 realizarDeposito();
                 break;
             case 3:
-                System.out.println("Ingrese el retiro");
                 realizarRetiro();
                 break;
             case 4:
@@ -70,11 +67,21 @@ public class CajeroApp {
             System.out.println("No se pudo realizar el deposito");
         }
         
-        cuenta.obtenerInformacion();
+        System.out.println(cuenta.obtenerInformacion());
+        
     }
     
     private void realizarRetiro(){
-    
+        double monto = lector.leerDoubleMayorCero("Ingrese el monto a RETIRAR");
+        boolean retiroCorrecto = cuenta.retirar(monto);
+        
+        if(retiroCorrecto){
+            System.out.println("El retiro se realizo CORRECTAMENTE");
+        }else{
+            System.out.println("No se ppudo REALIZAR el retiro");
+        }
+        
+        System.out.println(cuenta.obtenerInformacion());
     }
    
 }

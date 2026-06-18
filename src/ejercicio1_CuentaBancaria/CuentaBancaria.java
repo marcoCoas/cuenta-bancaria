@@ -41,7 +41,7 @@ public class CuentaBancaria {
     }
     
     public String obtenerInformacion(){
-        return "Titular: " + titular + " | Saldo: S/ " + saldo;
+        return "Titular: " + titular + " | Saldo: S/ " + String.format("%.2f", saldo);
     }
            
 }
