@@ -78,7 +78,7 @@ public class CajeroApp {
         if(retiroCorrecto){
             System.out.println("El retiro se realizo CORRECTAMENTE");
         }else{
-            System.out.println("No se ppudo REALIZAR el retiro");
+            System.out.println("No se pudo REALIZAR el retiro");
         }
         
         System.out.println(cuenta.obtenerInformacion());
