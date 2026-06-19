@@ -6,7 +6,12 @@ public class CuentaBancaria {
 
     public CuentaBancaria(String titular, double saldo) {
         this.titular = titular;
-        this.saldo = saldo;
+        if(saldo<0){
+            saldo=0;
+        }else{
+            this.saldo = saldo;
+        }
+        
     }
 
     public String getTitular() {
