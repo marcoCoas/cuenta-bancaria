@@ -1,6 +1,5 @@
 package ejercicio1_CuentaBancaria;
 
-import java.util.Scanner;
 
 public class CuentaBancaria {
     private String titular;
@@ -9,7 +8,7 @@ public class CuentaBancaria {
     public CuentaBancaria(String titular, double saldo) {
         this.titular = titular;
         if(saldo<0){
-            saldo=0;
+            this.saldo=0;
         }else{
             this.saldo = saldo;
         }
