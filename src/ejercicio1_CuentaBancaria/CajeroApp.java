@@ -26,14 +26,20 @@ public class CajeroApp {
         double saldo = lector.leerDoubleNoNegativo("Ingrese el saldo inicial");
         
         cuenta = new CuentaBancaria(titular, saldo);
+        
+        System.out.println("Cuenta creada");
+        System.out.println(cuenta.obtenerInformacion());
     }
     
     private void mostrarMenu(){
-        System.out.println("===============MENU=========================");
+        System.out.println("==============================================");
+        System.out.println("===============CAJERO AUTOMATICO==============");
+        System.out.println("==============================================");
         System.out.println("1. Ver informacion");
         System.out.println("2. Depositar");
         System.out.println("3. Retirar");
         System.out.println("4. Salir");
+        System.out.println("==============================================");
     }
     
     private void procesarOpcion(int opcion){
@@ -78,7 +84,7 @@ public class CajeroApp {
         if(retiroCorrecto){
             System.out.println("El retiro se realizo CORRECTAMENTE");
         }else{
-            System.out.println("No se pudo REALIZAR el retiro");
+            System.out.println("No se pudo REALIZAR el retiro. Saldo insuficiente");
         }
         
         System.out.println(cuenta.obtenerInformacion());
