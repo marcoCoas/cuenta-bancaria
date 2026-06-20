@@ -6,7 +6,12 @@ public class CuentaBancaria {
     private double saldo;
 
     public CuentaBancaria(String titular, double saldo) {
-        this.titular = titular;
+        if(titular == null || titular.trim().isEmpty()){
+            this.titular = "Sin vacio";
+        }else{
+            this.titular = titular.trim();
+        }
+        
         if(saldo<0){
             this.saldo=0;
         }else{
