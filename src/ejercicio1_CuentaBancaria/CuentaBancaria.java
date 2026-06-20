@@ -1,5 +1,7 @@
 package ejercicio1_CuentaBancaria;
 
+import java.util.Scanner;
+
 public class CuentaBancaria {
     private String titular;
     private double saldo;
@@ -13,6 +15,7 @@ public class CuentaBancaria {
         }
         
     }
+    
 
     public String getTitular() {
         return titular;

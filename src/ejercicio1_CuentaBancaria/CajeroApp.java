@@ -22,7 +22,7 @@ public class CajeroApp {
     }
     
     private void crearCuenta(){
-        String titular = lector.leerTexto("Ingrese el nombre del usuario");
+        String titular = lector.leerTextoNoVacio("Ingrese el nombre del usuario");
         double saldo = lector.leerDoubleNoNegativo("Ingrese el saldo inicial");
         
         cuenta = new CuentaBancaria(titular, saldo);

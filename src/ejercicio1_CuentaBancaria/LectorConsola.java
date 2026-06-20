@@ -13,6 +13,25 @@ public class LectorConsola {
         return sc.nextLine();
     }
     
+    public String leerTextoNoVacio(String mensaje){
+        String texto = "";
+        boolean valido = false;
+        
+        while(!valido){
+            System.out.println(mensaje);
+            texto = sc.nextLine();
+            
+            if(texto.trim().isEmpty()){
+                System.out.println("El texto no puede estar vacio");
+            }else{
+                valido = true;
+            }
+            
+        }
+        
+        return texto.trim();
+    }
+    
     public double leerDoubleNoNegativo(String mensaje){
         double valor = 0;
         boolean valido = false;
